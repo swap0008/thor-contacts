@@ -1,0 +1,31 @@
+
+plugins:
+  - serverless-plugin-typescript
+  - serverless-offline
+
+#custom:
+#  serverless-offline:
+#    port: 6000
+
+service: notifications-service
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+  stage: dev # Set the default stage used. Default is dev
+  region: us-west-2 # Overwrite the default region used. Default is us-east-1
+  profile: default # The default profile to use with this service
+  memorySize: 256 # Overwrite the default memory size. Default is 1024
+  timeout: 20 # The default is 6
+#  environment:
+#      NODE_ENV: production
+
+
+functions:
+  hello:
+    handler: src/services/auto/handler.hello
+
+    events:
+      - http:
+          path: hello
+          method: get
