@@ -5,18 +5,18 @@ env.hosts = [ 'jarvis']
 env.user  = "ec2-user"
 
 # Repository
-repo_name = "aws-lambda-typescript-boilerplate"
-repo_url = "https://github.com/teaminstalocate/%s.git" % (repo_name)
+repo_name = "thor-contacts"
+repo_url = "https://swap0008@bitbucket.org/swap0008/%s.git" % (repo_name)
 
 # -----------------------------------------------
 # Local Machine
-local_base_dir = "~/instalocate/code/teaminstalocate/" 
+local_base_dir = "~/Work/envisionlabs/" 
 local_code_dir = local_base_dir + repo_name
 
 
 # -----------------------------------------------
 # Remote Machine
-remote_code_base_dir = "~/instalocate/code/teaminstalocate/"
+remote_code_base_dir = "~/envisionlabs/"
 remote_code_dir = remote_code_base_dir + repo_name
 
 def commit_and_push_to_repository():
